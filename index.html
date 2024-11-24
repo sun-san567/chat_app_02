@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャットアプリ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <!-- ローディング表示 -->
+        <div id="loading" class="hidden">
+            <span class="loader"></span>
+        </div>
+
+        <!-- エラーメッセージ -->
+        <div id="error-message" class="hidden"></div>
+
+        <!-- 認証エリア -->
+        <div id="auth-area">
+            <button id="anonymous-login" aria-label="匿名でログイン">
+                匿名でログイン
+            </button>
+        </div>
+
+        <!-- チャットエリア -->
+        <div id="chat-area" class="hidden">
+            <div id="user-info">
+                <span id="user-name"></span>
+                <button id="logout-btn">ログアウト</button>
+            </div>
+            <div id="messages"></div>
+            <div class="input-area">
+                <form id="message-form">
+                    <input type="text" id="message-input" placeholder="メッセージを入力" aria-label="メッセージを入力" required>
+                    <button type="submit">送信</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/chat.js"></script>
+</body>
+
+</html>
